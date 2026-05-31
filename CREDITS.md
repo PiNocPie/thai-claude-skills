@@ -41,7 +41,7 @@ Repo นี้ดัดแปลงและรวบรวม Skills จาก 
 
 - **MIT skills**: เก็บ copyright notice ของ original author + ใส่ attribution ในไฟล์ SKILL.md ทุกตัว
 - **Apache 2.0 (anthropics/skills)**: ระบุการแก้ไข (แปลเป็นไทย) ในแต่ละไฟล์ และเก็บ NOTICE
-- **Permission requested**: skills จาก nimrodfisher/data-analytics-skills อยู่ระหว่างขออนุญาตอย่างเป็นทางการ (ระหว่างนี้ใช้แบบ derivative work ที่ให้เครดิตชัดเจน — ถ้าเจ้าของไม่อนุญาต จะนำออกทันที)
+- **Permission requested**: skills จาก nimrodfisher/data-analytics-skills อยู่ระหว่างขออนุญาตอย่างเป็นทางการ (ระหว่างนี้ใช้แบบ derivative work ที่ให้เครดิตชัดเจน, ถ้าเจ้าของไม่อนุญาต จะนำออกทันที)
 
 ---
 

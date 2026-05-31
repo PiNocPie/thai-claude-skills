@@ -1,62 +1,59 @@
 ---
 name: resume-builder-th
-description: resume ATS-friendly + bullet ขายงาน. Use when user wants to: เขียน resume / CV. Triggers on (Thai+EN): 'resume', 'CV', 'เรซูเม่'
+description: Build an ATS-friendly Thai resume/CV for new graduates or career changers. Bullets use Action+Task+Result+Metric format. Supports Thai, English, and bilingual versions for both Thai and international employers. Triggers when user says (Thai/EN): 'เขียน resume', 'ทำ CV', 'เรซูเม่', 'อัพเดท resume', 'สร้างเรซูเม่', 'CV สมัครงาน', 'เด็กจบใหม่ resume'
 ---
 
-# เขียน resume / CV
+# เขียน Resume / CV ภาษาไทย
 
-> 🇹🇭 **ปรับมาเป็นภาษาไทย** | Adapted to Thai
-> **ดัดแปลงจาก:** [w95/awesome-claude-corporate-skills](https://github.com/w95/awesome-claude-corporate-skills)
-> **Skill ต้นฉบับ:** `03-human-resources/resume-builder`
-> **License:** MIT
-> **หมายเหตุการแก้ไข:** แปลเป็นภาษาไทย, ปรับ trigger ให้รองรับคำไทย, ปรับตัวอย่างให้เข้ากับบริบทคนทำงาน/นักศึกษาไทย
+> 🇹🇭 ดัดแปลงเป็นภาษาไทยจาก [w95/awesome-claude-corporate-skills](https://github.com/w95/awesome-claude-corporate-skills/tree/main/03-human-resources/resume-builder) · License: MIT
+
+## ทำอะไรได้
+
+ช่วยเขียน resume ที่ผ่านระบบ ATS (ระบบกรอง resume อัตโนมัติของบริษัท) แล้วยังโดนใจคนอ่านด้วย, bullet ทุกบรรทัดใช้สูตร **Action + Task + Result + ตัวเลข** เพื่อให้ HR เห็นค่าของคุณภายใน 6 วินาทีแรก
+
+ทำได้ทั้ง resume ไทย, English และเวอร์ชั่น 2 ภาษาสำหรับสมัครบริษัทต่างชาติ
+
+## เหมาะกับใคร
+
+- **เด็กจบใหม่** ที่ไม่รู้จะเขียนยังไงให้ดึงดูดบริษัท
+- **คนเปลี่ยนสายงาน** ที่อยากจัด experience ใหม่ให้ตรง role เป้าหมาย
+- **คนทำงาน 2-5 ปี** ที่อยากอัพเดท resume สมัครที่ใหม่
+- **คนสมัครต่างประเทศ** ที่ต้องทำ international CV (US/EU style)
+
+## บอก Claude ยังไง
+
+```
+ช่วยเขียน resume สมัครตำแหน่ง Marketing Coordinator
+ฉันเพิ่งจบ นิเทศ จุฬาฯ มีฝึกงาน agency 3 เดือน
+```
+
+```
+อัพเดท resume, เปลี่ยนสายจาก Marketing ไป Product Manager
+ทำ marketing ที่ Shopee 3 ปี เคยจัด launch 2 ครั้ง
+อยากเน้น transferable skills
+```
+
+```
+เขียน resume English version สำหรับสมัครงาน remote ที่บริษัทยุโรป
+ตำแหน่ง Content Strategist
+```
+
+Claude จะถามต่อก่อนเริ่มเขียน: ตำแหน่งเป้าหมาย, JD (ถ้ามี, paste มาเลย), การศึกษา, ประสบการณ์, ทักษะ, format (ไทย/อังกฤษ/2 ภาษา), จำนวนหน้า
+
+## สิ่งที่จะได้
+
+1. **Resume ฉบับ Markdown**, copy ไปทำเป็น PDF ผ่าน [resume.io](https://resume.io) หรือ Canva ได้ทันที
+2. **เวอร์ชัน ATS-friendly**, plain text สำหรับ paste ในระบบสมัครงานออนไลน์
+3. **Cover letter ฉบับร่าง** (ถ้าขอ)
+4. **Checklist ก่อนส่ง**, เช็คความถูกต้องก่อน submit
+
+## ที่ต้องระวัง
+
+- **อย่าโกหก**, Resume เกินจริง = โดนจับได้ตอนสัมภาษณ์ (HR ไทยเช็ค reference จริง)
+- **ตัวเลขต้องอธิบายได้**, เขียน "เพิ่มยอดขาย 30%" ต้องตอบได้ว่าวัดจากอะไร เทียบกับช่วงไหน
+- **ใส่รูป?**, บริษัทไทยใส่ได้; บริษัท US/UK/EU **ห้ามใส่** เพราะป้องกัน bias
+- **GPA**, ใส่ถ้า ≥ 3.00, ไม่ใส่ถ้าจบมาเกิน 3 ปี
 
 ---
 
-## ใช้เมื่อไหร่
-
-ใช้ skill นี้เมื่อต้องการ **เขียน resume / cv** — เหมาะกับ นักศึกษาปีสูง / เด็กจบใหม่ ที่กำลังหางาน/ฝึกงาน
-
-## วิธีใช้
-
-บอก Claude ตรงๆ เช่น:
-
-- "ช่วยเขียน resume / cvให้หน่อย"
-- "ทำ 03-human-resources/resume-builder ให้"
-- "resume"
-
-Claude จะถามข้อมูลเพิ่มเติมที่จำเป็น เช่น context, audience, goal ก่อนเริ่มทำงาน
-
-## ขั้นตอนการทำงาน
-
-1. **เก็บ context** — Claude จะถามข้อมูลที่จำเป็น (อย่ารีบให้คำตอบ ระบุให้ครบ)
-2. **ร่างฉบับแรก** — Claude ทำ draft แรกตามโครงสร้างมาตรฐาน
-3. **ปรับแก้** — รีวิวด้วยกัน ปรับ tone/รายละเอียดให้เข้ากับงาน
-4. **ส่งมอบ** — output พร้อมใช้ทันที (copy ไปใช้ หรือ save เป็นไฟล์)
-
-## Output ที่ได้
-
-- Structured output ตามมาตรฐานของงานนี้
-- ภาษาไทยเป็นหลัก (ปรับเป็นอังกฤษได้ถ้าต้องการ)
-- พร้อม CTA / next step ในตอนท้าย
-
-## ตัวอย่าง prompts ที่ใช้บ่อย
-
-```
-resume — บริบทคือ [อธิบายสถานการณ์]
-```
-
-```
-ช่วยเขียน resume / cvสำหรับ [target] — ต้องการแบบ [tone/style]
-```
-
-## ข้อควรระวัง
-
-- ตรวจสอบ output ก่อนใช้งานจริงเสมอ — AI อาจมี factual error
-- ปรับตัวอย่าง/อ้างอิงให้ตรงกับบริบทไทย (กฎหมาย, วัฒนธรรม, ตลาด)
-- ถ้าใช้ในงานเชิงกฎหมาย/การเงิน/การแพทย์ — ปรึกษาผู้เชี่ยวชาญก่อน
-
-## เครดิต
-
-Skill นี้ดัดแปลงจาก [w95/awesome-claude-corporate-skills](https://github.com/w95/awesome-claude-corporate-skills) ภายใต้ MIT License
-ดู [CREDITS.md](../../../CREDITS.md) สำหรับรายชื่อแหล่งที่มาทั้งหมด
+🔙 [กลับไปดู skill ทั้งหมด](../../../README.md) · 🐛 [แจ้ง bug / ขอแก้](https://github.com/PiNocPie/thai-claude-skills/issues) · 📜 [License เต็ม](../../../CREDITS.md)

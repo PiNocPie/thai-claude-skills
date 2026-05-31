@@ -1,6 +1,8 @@
 # 🇹🇭 Thai Claude Skills
 
-**คลัง SKILL.md ภาษาไทย 115+ ตัว สำหรับคนทำงาน + นักศึกษา**
+**คลัง SKILL.md ภาษาไทย 67 ตัว สำหรับคนทำงาน + นักศึกษา**
+
+ใช่ครับ 67 (ตามมีม 67) คัดมาแล้วใช้ได้จริงทุกตัว ไม่ใช่จำนวนปลอมๆ
 
 ใช้กับ Claude.ai, Claude Code, Cursor, Codex, หรือ AI coding agent ตัวไหนก็ได้ที่รองรับ Agent Skills format
 
@@ -21,26 +23,27 @@ Repo นี้คือ **คลังกลาง** ที่ทำให้ค
 
 ---
 
-## 📂 หมวดที่มี (115 skills)
+## 📂 หมวดที่มี (67 skills)
 
-### 👔 สำหรับคนทำงาน (83 skills)
-
-| หมวด | จำนวน | สำหรับใคร |
-|------|------|----------|
-| [Marketing](./skills/marketing) | 20 | นักการตลาด, social media manager, freelancer |
-| [Content / Copywriting](./skills/content) | 18 | นักเขียน, content creator |
-| [HR / ธุรการ](./skills/hr-admin) | 15 | HR, ธุรการ, ผู้จัดการ |
-| [Designer](./skills/designer) | 10 | UX/UI, product designer |
-| [Data Analyst](./skills/data-analyst) | 10 | data analyst, BI |
-| [Productivity / PM](./skills/productivity) | 10 | พนักงานออฟฟิศทุกตำแหน่ง |
-
-### 🎓 สำหรับนักศึกษา (32 skills)
+### 👔 สำหรับคนทำงาน (48 skills)
 
 | หมวด | จำนวน | สำหรับใคร |
 |------|------|----------|
-| [วิจัย / วิชาการ](./skills/student-research) | 12 | นักศึกษา ป.ตรี/โท/เอก |
-| [งานเขียน / รายงาน](./skills/student-writing) | 10 | นักศึกษาที่ต้องส่งรายงาน/สอบ |
-| [เตรียมตัวทำงาน](./skills/student-career) | 10 | ฝึกงาน, จบใหม่, สมัครงาน |
+| [Marketing](./skills/marketing) | 12 | นักการตลาด, social media manager, freelancer |
+| [Content / Copywriting](./skills/content) | 11 | นักเขียน, content creator |
+| [HR / ธุรการ](./skills/hr-admin) | 11 | HR, ธุรการ, ผู้จัดการ |
+| [Designer](./skills/designer) | 7 | UX/UI, product designer |
+| [Productivity / PM](./skills/productivity) | 7 | พนักงานออฟฟิศทุกตำแหน่ง |
+
+### 🎓 สำหรับนักศึกษา (19 skills)
+
+| หมวด | จำนวน | สำหรับใคร |
+|------|------|----------|
+| [วิจัย / วิชาการ](./skills/student-research) | 7 | นักศึกษา ป.ตรี/โท/เอก |
+| [งานเขียน / รายงาน](./skills/student-writing) | 6 | นักศึกษาที่ต้องส่งรายงาน/สอบ |
+| [เตรียมตัวทำงาน](./skills/student-career) | 6 | ฝึกงาน, จบใหม่, สมัครงาน |
+
+> **อยากได้ Data Analyst skills?** กำลังขออนุญาตจาก source repo อยู่ จะเพิ่มเร็วๆ นี้ ติดตามได้
 
 ---
 
@@ -85,7 +88,7 @@ cp -r thai-claude-skills/skills/marketing/social-content-th ~/.claude/skills/
 → Claude เรียก resume-builder-th อัตโนมัติ
 ```
 
-ไม่ต้องจำชื่อ skill — Claude หยิบใช้เองตาม trigger ภาษาไทยที่กำหนดไว้
+ไม่ต้องจำชื่อ skill เพราะ Claude หยิบใช้เองตาม trigger ภาษาไทยที่กำหนดไว้
 
 ---
 
@@ -99,7 +102,7 @@ Skills ทุกตัวในนี้ **ดัดแปลงมาจาก 
 
 ดูรายชื่อ **แหล่งที่มาทั้งหมด + license** ที่ [CREDITS.md](./CREDITS.md)
 
-ขอบคุณ open source maintainers ทุกคน — ถ้าไม่มีพวกคุณ repo นี้คงไม่เกิด 🙏
+ขอบคุณ open source maintainers ทุกคน ถ้าไม่มีพวกคุณ repo นี้คงไม่เกิด 🙏
 
 ---
 
@@ -111,11 +114,21 @@ Skills ทุกตัวในนี้ **ดัดแปลงมาจาก 
 
 ---
 
+## 📬 ติดต่อ
+
+อยากให้ช่วยทำ AI workflow / custom skill ให้ทีมหรือบริษัท · มีโปรเจกอยากชวนคุย · อยากให้ไปพูด/workshop
+
+📧 **panupong.workcontact [at] gmail.com**
+
+(บอกในอีเมลด้วยว่าเห็นจาก repo นี้ จะได้ตอบเร็วขึ้น)
+
+---
+
 ## 📜 License
 
-โค้ดและการแปลของ repo นี้ — MIT License
+โค้ดและการแปลของ repo นี้ใช้ MIT License
 
-Skills แต่ละตัวอาจมี license ต่างกันตาม source — ดู [CREDITS.md](./CREDITS.md) และ LICENSE file ในแต่ละ skill folder
+Skills แต่ละตัวอาจมี license ต่างกันตาม source ดู [CREDITS.md](./CREDITS.md) และ LICENSE file ในแต่ละ skill folder
 
 ---
 

@@ -55,13 +55,13 @@ description: คำอธิบายภาษาอังกฤษ (สำค�
 - **สำหรับ bug**: skill ตัวไหน, ทำอะไรแล้วเกิดอะไร, คาดหวังอะไร
 - **สำหรับ feature request**: อยากได้ skill อะไร, ทำงานอย่างไร, มี repo อังกฤษเป็น reference ไหม
 
-## License Compliance — สำคัญที่สุด
+## License Compliance, สำคัญที่สุด
 
 ก่อนเอา skill จาก repo อื่นมา ต้องเช็ค:
 
-1. **มี LICENSE ไหม** — ถ้าไม่มี = "All Rights Reserved" ห้ามใช้โดยไม่ขออนุญาต
-2. **License ประเภทอะไร** — MIT/Apache 2.0/BSD = ใช้ได้ถ้าให้เครดิต; GPL = ต้องระวัง; CC-BY-NC = ใช้ commercial ไม่ได้
-3. **ใส่ attribution** — ทุก skill ที่ดัดแปลงต้องระบุ source + author + license + การแก้ไข
+1. **มี LICENSE ไหม**, ถ้าไม่มี = "All Rights Reserved" ห้ามใช้โดยไม่ขออนุญาต
+2. **License ประเภทอะไร**, MIT/Apache 2.0/BSD = ใช้ได้ถ้าให้เครดิต; GPL = ต้องระวัง; CC-BY-NC = ใช้ commercial ไม่ได้
+3. **ใส่ attribution**, ทุก skill ที่ดัดแปลงต้องระบุ source + author + license + การแก้ไข
 
 ถ้าไม่แน่ใจ → ถามใน Issue ก่อน
 

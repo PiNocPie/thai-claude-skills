@@ -1,62 +1,46 @@
 ---
 name: seo-audit-th
-description: audit technical + on-page SEO พร้อมวิธีแก้. Use when user wants to: ตรวจสุขภาพ SEO เว็บ. Triggers on (Thai+EN): 'SEO audit', 'ตรวจ SEO'
+description: audit technical + on-page SEO พร้อมวิธีแก้ | สำหรับ นักการตลาด ครีเอเตอร์ฟรีแลนซ์ . Triggers when user says (Thai/EN): 'SEO audit', 'ตรวจ SEO'
 ---
 
 # ตรวจสุขภาพ SEO เว็บ
 
-> 🇹🇭 **ปรับมาเป็นภาษาไทย** | Adapted to Thai
-> **ดัดแปลงจาก:** [OpenClaudia/openclaudia-skills](https://github.com/OpenClaudia/openclaudia-skills)
-> **Skill ต้นฉบับ:** `seo-audit`
-> **License:** MIT
-> **หมายเหตุการแก้ไข:** แปลเป็นภาษาไทย, ปรับ trigger ให้รองรับคำไทย, ปรับตัวอย่างให้เข้ากับบริบทคนทำงาน/นักศึกษาไทย
+> 🇹🇭 ดัดแปลงเป็นภาษาไทยจาก [OpenClaudia/openclaudia-skills](https://github.com/OpenClaudia/openclaudia-skills/tree/main/skills/seo-audit) · License: MIT
+
+## ทำอะไรได้
+
+audit technical + on-page SEO พร้อมวิธีแก้
+
+## เหมาะกับใคร
+
+นักการตลาด ครีเอเตอร์ฟรีแลนซ์ หรือคนทำ social media ในบริษัท
+
+ใช้ตอน:
+
+- ต้องคิดแคมเปญใหม่แต่หัวว่าง
+- อยากเริ่มแต่ไม่รู้จะถามคำถามอะไรกับลูกค้า
+- มีไอเดียแต่ไม่รู้จะวาง structure ยังไง
+
+## บอก Claude ยังไง
+
+แค่พิมพ์เป็นภาษาไทยปกติ ไม่ต้องจำชื่อ skill เพราะ Claude จะหยิบใช้เองตาม trigger ที่กำหนดไว้
+
+ตัวอย่าง:
+
+```
+"ช่วยตรวจสุขภาพ SEO เว็บ ให้หน่อย บริบทคือ [อธิบายสถานการณ์ของคุณ]"
+```
+
+```
+"ตรวจ SEO สำหรับ [กลุ่มเป้าหมาย], อยากได้แบบ [น้ำเสียง/สไตล์]"
+```
+
+Claude จะถามข้อมูลที่ยังขาด (เช่น กลุ่มเป้าหมาย น้ำเสียง บริบทธุรกิจ) ก่อนเริ่มทำงาน
+
+## ที่ต้องระวัง
+
+ตรวจตัวเลข, claim, สถิติทุกครั้ง, AI ชอบกุข้อมูลที่ฟังดูน่าเชื่อถือ
 
 ---
 
-## ใช้เมื่อไหร่
-
-ใช้ skill นี้เมื่อต้องการ **ตรวจสุขภาพ seo เว็บ** — เหมาะกับ นักการตลาด, social media manager, freelancer
-
-## วิธีใช้
-
-บอก Claude ตรงๆ เช่น:
-
-- "ช่วยตรวจสุขภาพ seo เว็บให้หน่อย"
-- "ทำ seo-audit ให้"
-- "SEO audit"
-
-Claude จะถามข้อมูลเพิ่มเติมที่จำเป็น เช่น context, audience, goal ก่อนเริ่มทำงาน
-
-## ขั้นตอนการทำงาน
-
-1. **เก็บ context** — Claude จะถามข้อมูลที่จำเป็น (อย่ารีบให้คำตอบ ระบุให้ครบ)
-2. **ร่างฉบับแรก** — Claude ทำ draft แรกตามโครงสร้างมาตรฐาน
-3. **ปรับแก้** — รีวิวด้วยกัน ปรับ tone/รายละเอียดให้เข้ากับงาน
-4. **ส่งมอบ** — output พร้อมใช้ทันที (copy ไปใช้ หรือ save เป็นไฟล์)
-
-## Output ที่ได้
-
-- Structured output ตามมาตรฐานของงานนี้
-- ภาษาไทยเป็นหลัก (ปรับเป็นอังกฤษได้ถ้าต้องการ)
-- พร้อม CTA / next step ในตอนท้าย
-
-## ตัวอย่าง prompts ที่ใช้บ่อย
-
-```
-SEO audit — บริบทคือ [อธิบายสถานการณ์]
-```
-
-```
-ช่วยตรวจสุขภาพ seo เว็บสำหรับ [target] — ต้องการแบบ [tone/style]
-```
-
-## ข้อควรระวัง
-
-- ตรวจสอบ output ก่อนใช้งานจริงเสมอ — AI อาจมี factual error
-- ปรับตัวอย่าง/อ้างอิงให้ตรงกับบริบทไทย (กฎหมาย, วัฒนธรรม, ตลาด)
-- ถ้าใช้ในงานเชิงกฎหมาย/การเงิน/การแพทย์ — ปรึกษาผู้เชี่ยวชาญก่อน
-
-## เครดิต
-
-Skill นี้ดัดแปลงจาก [OpenClaudia/openclaudia-skills](https://github.com/OpenClaudia/openclaudia-skills) ภายใต้ MIT License
-ดู [CREDITS.md](../../../CREDITS.md) สำหรับรายชื่อแหล่งที่มาทั้งหมด
+🔙 [กลับไปดู skill ทั้งหมด](../../../README.md) · 🐛 [แจ้ง bug / ขอแก้](https://github.com/PiNocPie/thai-claude-skills/issues) · 📜 [License เต็ม](../../../CREDITS.md)

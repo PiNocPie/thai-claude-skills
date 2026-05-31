@@ -1,10 +1,10 @@
-# 🎬 Reel Scripts — Thai Claude Skills Launch
+# 🎬 Reel Scripts, Thai Claude Skills Launch
 
-3 versions สำหรับ AI Reel — เลือกตามแนวที่ชอบ แต่ละอันมี hook, body, CTA + caption + hashtag พร้อมโพสต์
+3 versions สำหรับ AI Reel, เลือกตามแนวที่ชอบ แต่ละอันมี hook, body, CTA + caption + hashtag พร้อมโพสต์
 
 ---
 
-## 🎯 Version 1 — "Hook + Pain + Solution" (60 วินาที, viral-friendly)
+## 🎯 Version 1, "Hook + Pain + Solution" (60 วินาที, viral-friendly)
 
 ### Hook (0-3 วิ)
 > "หยุดจ่าย ChatGPT Plus เดือนละ 700 ได้แล้ว ถ้ารู้สิ่งนี้"
@@ -25,7 +25,7 @@
 > นักศึกษาต้องสรุป paper ภาษาอังกฤษ? มี"
 
 ### CTA (50-60 วิ)
-> "ลิงก์ GitHub ที่ bio — โหลดฟรีตลอดชีวิต ไม่ต้องสมัครอะไรเลย
+> "ลิงก์ GitHub ที่ bio, โหลดฟรีตลอดชีวิต ไม่ต้องสมัครอะไรเลย
 >
 > Save โพสต์นี้ไว้ ส่งให้เพื่อนที่ยังจ่ายค่า AI แพงๆ"
 
@@ -34,7 +34,7 @@
 หยุดจ่ายค่า AI แพงๆ ได้แล้ว 🇹🇭
 
 รวบรวม 115 Claude Skills ภาษาไทยฟรี
-แบ่งหมวดตามอาชีพ — คนทำงาน + นักศึกษา
+แบ่งหมวดตามอาชีพ คนทำงาน + นักศึกษา
 
 📌 Save ไว้ใช้ตลอด
 📌 Tag เพื่อนที่ใช้ AI อยู่
@@ -45,7 +45,7 @@
 
 ---
 
-## 🎯 Version 2 — "Story / Founder" (90 วินาที, trust-building)
+## 🎯 Version 2, "Story / Founder" (90 วินาที, trust-building)
 
 ### Hook (0-5 วิ)
 > "วันก่อนเห็นรุ่นน้องนั่งเขียน resume ภาษาอังกฤษอยู่ 3 ชั่วโมง... ผมเลยทำสิ่งนี้"
@@ -59,18 +59,18 @@
 >
 > ปัญหาคือ **Skills ดีๆ บน GitHub เป็นภาษาอังกฤษหมด** คนไทยที่ไม่คล่อง English ใช้ลำบาก
 >
-> ผมเลยรวบรวม Skills 115 ตัวจาก repo ดังๆ ที่ open source อยู่แล้ว — แปลเป็นไทย ปรับให้เข้ากับบริบทเรา ใส่เครดิตเจ้าของต้นฉบับครบ
+> ผมเลยรวบรวม Skills 115 ตัวจาก repo ดังๆ ที่ open source อยู่แล้ว, แปลเป็นไทย ปรับให้เข้ากับบริบทเรา ใส่เครดิตเจ้าของต้นฉบับครบ
 >
 > [แสดง screen เลื่อนผ่าน folder ทั้ง 9 หมวด]
 >
 > มีตั้งแต่:
-> - **คนทำงาน** — เขียน JD, ทำ content calendar, สร้างปฏิทินคอนเทนต์, ออกแบบ A/B test
-> - **นักศึกษา** — สรุป paper, เขียน thesis, เตรียมสอบ defense, สร้าง resume สมัครงาน
+> - **คนทำงาน**, เขียน JD, ทำ content calendar, สร้างปฏิทินคอนเทนต์, ออกแบบ A/B test
+> - **นักศึกษา**, สรุป paper, เขียน thesis, เตรียมสอบ defense, สร้าง resume สมัครงาน
 >
 > ทั้งหมดฟรี ใช้กับ Claude.ai, Claude Code, Cursor ได้หมด"
 
 ### CTA (75-90 วิ)
-> "ลิงก์ GitHub ที่ bio — ดาวให้หน่อยถ้าชอบ และ tag เพื่อนที่น่าจะใช้ได้
+> "ลิงก์ GitHub ที่ bio, ดาวให้หน่อยถ้าชอบ และ tag เพื่อนที่น่าจะใช้ได้
 >
 > ถ้ามี skill อยากให้ทำเพิ่ม คอมเมนต์บอกได้ จะทำให้ฉบับถัดไป"
 
@@ -90,10 +90,10 @@
 
 ---
 
-## 🎯 Version 3 — "Quick Demo" (30 วินาที, TikTok native)
+## 🎯 Version 3, "Quick Demo" (30 วินาที, TikTok native)
 
 ### Hook (0-3 วิ)
-> "AI เขียน resume ให้ใน 30 วิ — ภาษาไทย"
+> "AI เขียน resume ให้ใน 30 วิ, ภาษาไทย"
 
 **Visual:** หน้าจอ Claude เปิดอยู่
 
@@ -105,10 +105,10 @@
 >
 > [Cut to: Claude generate resume เต็มหน้าทันที]
 >
-> **Voice over:** "นี่คือ Claude Skill — playbook สอน AI ให้ทำงานเฉพาะทาง ผมรวบรวม 115 ตัวภาษาไทยไว้ใน GitHub"
+> **Voice over:** "นี่คือ Claude Skill ที่เป็น playbook สอน AI ให้ทำงานเฉพาะทาง ผมรวบรวม 115 ตัวภาษาไทยไว้ใน GitHub"
 
 ### CTA (25-30 วิ)
-> "ลิงก์ที่ bio — ฟรี"
+> "ลิงก์ที่ bio, ฟรี"
 
 ### Caption
 ```
@@ -123,11 +123,11 @@
 
 ## 📌 Tips การถ่าย
 
-1. **Screen recording** — ใช้ OBS/QuickTime + zoom เข้าจุดที่ AI กำลังพิมพ์ (สำคัญ! คน scroll TikTok ดูที่ขนาดเล็ก)
-2. **Subtitle** — ใส่ทุก reel (คน 80% ดู mute)
-3. **Hook ต้องตรง 3 วินาทีแรก** — ถ้าไม่ตัดสินใจอยู่ใน 3 วิ คน scroll ผ่าน
-4. **Vertical 9:16** — TikTok, Reel, Shorts
-5. **GitHub link** — ใส่ bio + ปักหมุดคอมเมนต์ตัวเองที่ comment ลิงก์ (TikTok algo ชอบ)
+1. **Screen recording**, ใช้ OBS/QuickTime + zoom เข้าจุดที่ AI กำลังพิมพ์ (สำคัญ! คน scroll TikTok ดูที่ขนาดเล็ก)
+2. **Subtitle**, ใส่ทุก reel (คน 80% ดู mute)
+3. **Hook ต้องตรง 3 วินาทีแรก**, ถ้าไม่ตัดสินใจอยู่ใน 3 วิ คน scroll ผ่าน
+4. **Vertical 9:16**, TikTok, Reel, Shorts
+5. **GitHub link**, ใส่ bio + ปักหมุดคอมเมนต์ตัวเองที่ comment ลิงก์ (TikTok algo ชอบ)
 
 ## 📈 Posting Strategy
 
@@ -136,14 +136,14 @@
 | Day 1 | Version 3 (short demo) | TikTok + Reels |
 | Day 3 | Version 1 (hook + pain) | TikTok + Reels + Shorts |
 | Day 7 | Version 2 (story) | TikTok + Facebook + LinkedIn |
-| Day 14 | "1 week update — ได้ X stars บน GitHub" | All channels |
+| Day 14 | "1 week update, ได้ X stars บน GitHub" | All channels |
 | Day 30 | "Top 10 skills ที่คนใช้เยอะสุด" | All channels |
 
 ## 🎯 Cross-promotion ที่ควรทำ
 
 - โพสต์ใน Facebook Group: **AI Builders Thailand, ThaiProgrammer, Digital Marketing Thailand, นักศึกษาจุฬา/ธรรมศาสตร์/มหิดล**
 - Tweet ภาษาไทยด้วย #AIไทย #คนทำงาน
-- LinkedIn post — เน้น angle "open source contribution"
+- LinkedIn post, เน้น angle "open source contribution"
 - Submit ไปยัง **Product Hunt** (international audience)
 - Email มา reach out ที่ marketing thai community เช่น **Tech Sauce, Brand Inside, Marketing Oops**
 

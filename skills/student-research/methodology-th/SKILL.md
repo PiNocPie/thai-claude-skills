@@ -1,62 +1,46 @@
 ---
 name: methodology-th
-description: section methodology — design, sample, analysis. Use when user wants to: เขียน methodology. Triggers on (Thai+EN): 'methodology', 'วิธีวิจัย'
+description: section methodology, design, sample, analysis | สำหรับ นักศึกษา. Triggers when user says (Thai/EN): 'methodology', 'วิธีวิจัย'
 ---
 
 # เขียน methodology
 
-> 🇹🇭 **ปรับมาเป็นภาษาไทย** | Adapted to Thai
-> **ดัดแปลงจาก:** [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills)
-> **Skill ต้นฉบับ:** `methodology-writer`
-> **License:** MIT
-> **หมายเหตุการแก้ไข:** แปลเป็นภาษาไทย, ปรับ trigger ให้รองรับคำไทย, ปรับตัวอย่างให้เข้ากับบริบทคนทำงาน/นักศึกษาไทย
+> 🇹🇭 ดัดแปลงเป็นภาษาไทยจาก [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills/tree/main/skills/methodology-writer) · License: MIT
+
+## ทำอะไรได้
+
+section methodology, design, sample, analysis
+
+## เหมาะกับใคร
+
+นักศึกษา ป.ตรี/โท/เอก ที่กำลังทำวิจัยหรือ thesis
+
+ใช้ตอน:
+
+- อ่าน paper ภาษาอังกฤษไม่ทัน
+- ที่ปรึกษาให้ revise งานแต่ไม่รู้จะเริ่มตรงไหน
+- ใกล้ deadline แต่ section ยังว่าง
+
+## บอก Claude ยังไง
+
+แค่พิมพ์เป็นภาษาไทยปกติ ไม่ต้องจำชื่อ skill เพราะ Claude จะหยิบใช้เองตาม trigger ที่กำหนดไว้
+
+ตัวอย่าง:
+
+```
+"ช่วยเขียน methodology ให้หน่อย บริบทคือ [อธิบายสถานการณ์ของคุณ]"
+```
+
+```
+"วิธีวิจัย สำหรับ [กลุ่มเป้าหมาย], อยากได้แบบ [น้ำเสียง/สไตล์]"
+```
+
+Claude จะถามข้อมูลที่ยังขาด (เช่น กลุ่มเป้าหมาย น้ำเสียง บริบทธุรกิจ) ก่อนเริ่มทำงาน
+
+## ที่ต้องระวัง
+
+อย่า copy ไปวาง thesis ตรงๆ = plagiarism, ใช้เป็นแนวทาง แล้วเขียนใหม่ด้วยภาษาคุณเอง พร้อมอ้างอิง
 
 ---
 
-## ใช้เมื่อไหร่
-
-ใช้ skill นี้เมื่อต้องการ **เขียน methodology** — เหมาะกับ นักศึกษา ป.ตรี/โท/เอก ที่ทำวิจัยหรือ thesis
-
-## วิธีใช้
-
-บอก Claude ตรงๆ เช่น:
-
-- "ช่วยเขียน methodologyให้หน่อย"
-- "ทำ methodology-writer ให้"
-- "methodology"
-
-Claude จะถามข้อมูลเพิ่มเติมที่จำเป็น เช่น context, audience, goal ก่อนเริ่มทำงาน
-
-## ขั้นตอนการทำงาน
-
-1. **เก็บ context** — Claude จะถามข้อมูลที่จำเป็น (อย่ารีบให้คำตอบ ระบุให้ครบ)
-2. **ร่างฉบับแรก** — Claude ทำ draft แรกตามโครงสร้างมาตรฐาน
-3. **ปรับแก้** — รีวิวด้วยกัน ปรับ tone/รายละเอียดให้เข้ากับงาน
-4. **ส่งมอบ** — output พร้อมใช้ทันที (copy ไปใช้ หรือ save เป็นไฟล์)
-
-## Output ที่ได้
-
-- Structured output ตามมาตรฐานของงานนี้
-- ภาษาไทยเป็นหลัก (ปรับเป็นอังกฤษได้ถ้าต้องการ)
-- พร้อม CTA / next step ในตอนท้าย
-
-## ตัวอย่าง prompts ที่ใช้บ่อย
-
-```
-methodology — บริบทคือ [อธิบายสถานการณ์]
-```
-
-```
-ช่วยเขียน methodologyสำหรับ [target] — ต้องการแบบ [tone/style]
-```
-
-## ข้อควรระวัง
-
-- ตรวจสอบ output ก่อนใช้งานจริงเสมอ — AI อาจมี factual error
-- ปรับตัวอย่าง/อ้างอิงให้ตรงกับบริบทไทย (กฎหมาย, วัฒนธรรม, ตลาด)
-- ถ้าใช้ในงานเชิงกฎหมาย/การเงิน/การแพทย์ — ปรึกษาผู้เชี่ยวชาญก่อน
-
-## เครดิต
-
-Skill นี้ดัดแปลงจาก [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) ภายใต้ MIT License
-ดู [CREDITS.md](../../../CREDITS.md) สำหรับรายชื่อแหล่งที่มาทั้งหมด
+🔙 [กลับไปดู skill ทั้งหมด](../../../README.md) · 🐛 [แจ้ง bug / ขอแก้](https://github.com/PiNocPie/thai-claude-skills/issues) · 📜 [License เต็ม](../../../CREDITS.md)

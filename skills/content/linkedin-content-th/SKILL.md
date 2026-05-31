@@ -1,62 +1,46 @@
 ---
 name: linkedin-content-th
-description: LinkedIn posts + carousel + strategy. Use when user wants to: LinkedIn post + carousel. Triggers on (Thai+EN): 'LinkedIn post'
+description: LinkedIn posts + carousel + strategy | สำหรับ นักเขียน คอนเทนต์ครีเอเตอร์ หร. Triggers when user says (Thai/EN): 'LinkedIn post'
 ---
 
 # LinkedIn post + carousel
 
-> 🇹🇭 **ปรับมาเป็นภาษาไทย** | Adapted to Thai
-> **ดัดแปลงจาก:** [OpenClaudia/openclaudia-skills](https://github.com/OpenClaudia/openclaudia-skills)
-> **Skill ต้นฉบับ:** `linkedin-content`
-> **License:** MIT
-> **หมายเหตุการแก้ไข:** แปลเป็นภาษาไทย, ปรับ trigger ให้รองรับคำไทย, ปรับตัวอย่างให้เข้ากับบริบทคนทำงาน/นักศึกษาไทย
+> 🇹🇭 ดัดแปลงเป็นภาษาไทยจาก [OpenClaudia/openclaudia-skills](https://github.com/OpenClaudia/openclaudia-skills/tree/main/skills/linkedin-content) · License: MIT
+
+## ทำอะไรได้
+
+LinkedIn posts + carousel + strategy
+
+## เหมาะกับใคร
+
+นักเขียน คอนเทนต์ครีเอเตอร์ หรือคนที่อยากสร้าง personal brand
+
+ใช้ตอน:
+
+- นั่งหน้าจอเปล่ามาครึ่งชั่วโมงแล้วยังเขียนไม่ออก
+- มีหัวข้อแล้วแต่ไม่รู้จะวางโครงยังไง
+- อยากได้ first draft ไว้แก้ต่อ ไม่ต้องเริ่มจากศูนย์
+
+## บอก Claude ยังไง
+
+แค่พิมพ์เป็นภาษาไทยปกติ ไม่ต้องจำชื่อ skill เพราะ Claude จะหยิบใช้เองตาม trigger ที่กำหนดไว้
+
+ตัวอย่าง:
+
+```
+"ช่วยLinkedIn post + carousel ให้หน่อย บริบทคือ [อธิบายสถานการณ์ของคุณ]"
+```
+
+```
+"LinkedIn post สำหรับ [กลุ่มเป้าหมาย], อยากได้แบบ [น้ำเสียง/สไตล์]"
+```
+
+Claude จะถามข้อมูลที่ยังขาด (เช่น กลุ่มเป้าหมาย น้ำเสียง บริบทธุรกิจ) ก่อนเริ่มทำงาน
+
+## ที่ต้องระวัง
+
+อ่านออกเสียงก่อนโพสต์เสมอ, ภาษาแปลกๆ มักโผล่ตอนอ่านดังๆ
 
 ---
 
-## ใช้เมื่อไหร่
-
-ใช้ skill นี้เมื่อต้องการ **linkedin post + carousel** — เหมาะกับ นักเขียน, content creator, นักศึกษาที่ทำ personal brand
-
-## วิธีใช้
-
-บอก Claude ตรงๆ เช่น:
-
-- "ช่วยlinkedin post + carouselให้หน่อย"
-- "ทำ linkedin-content ให้"
-- "LinkedIn post"
-
-Claude จะถามข้อมูลเพิ่มเติมที่จำเป็น เช่น context, audience, goal ก่อนเริ่มทำงาน
-
-## ขั้นตอนการทำงาน
-
-1. **เก็บ context** — Claude จะถามข้อมูลที่จำเป็น (อย่ารีบให้คำตอบ ระบุให้ครบ)
-2. **ร่างฉบับแรก** — Claude ทำ draft แรกตามโครงสร้างมาตรฐาน
-3. **ปรับแก้** — รีวิวด้วยกัน ปรับ tone/รายละเอียดให้เข้ากับงาน
-4. **ส่งมอบ** — output พร้อมใช้ทันที (copy ไปใช้ หรือ save เป็นไฟล์)
-
-## Output ที่ได้
-
-- Structured output ตามมาตรฐานของงานนี้
-- ภาษาไทยเป็นหลัก (ปรับเป็นอังกฤษได้ถ้าต้องการ)
-- พร้อม CTA / next step ในตอนท้าย
-
-## ตัวอย่าง prompts ที่ใช้บ่อย
-
-```
-LinkedIn post — บริบทคือ [อธิบายสถานการณ์]
-```
-
-```
-ช่วยlinkedin post + carouselสำหรับ [target] — ต้องการแบบ [tone/style]
-```
-
-## ข้อควรระวัง
-
-- ตรวจสอบ output ก่อนใช้งานจริงเสมอ — AI อาจมี factual error
-- ปรับตัวอย่าง/อ้างอิงให้ตรงกับบริบทไทย (กฎหมาย, วัฒนธรรม, ตลาด)
-- ถ้าใช้ในงานเชิงกฎหมาย/การเงิน/การแพทย์ — ปรึกษาผู้เชี่ยวชาญก่อน
-
-## เครดิต
-
-Skill นี้ดัดแปลงจาก [OpenClaudia/openclaudia-skills](https://github.com/OpenClaudia/openclaudia-skills) ภายใต้ MIT License
-ดู [CREDITS.md](../../../CREDITS.md) สำหรับรายชื่อแหล่งที่มาทั้งหมด
+🔙 [กลับไปดู skill ทั้งหมด](../../../README.md) · 🐛 [แจ้ง bug / ขอแก้](https://github.com/PiNocPie/thai-claude-skills/issues) · 📜 [License เต็ม](../../../CREDITS.md)
