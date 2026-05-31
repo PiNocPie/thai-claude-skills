@@ -1,0 +1,8 @@
+{
+  "name": "thai-worker-skills",
+  "version": "0.1.0",
+  "description": "115 Thai-language Claude skills for working professionals and students",
+  "author": "Thai Claude Skills Community",
+  "license": "MIT",
+  "skills": ["./skills"]
+}
