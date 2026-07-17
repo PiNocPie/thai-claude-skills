@@ -1,3 +1,7 @@
 scripts/
 .DS_Store
 *.log
+
+# reel-editor-th is the one skill that ships real scripts
+!skills/content/reel-editor-th/scripts/
+!skills/content/reel-editor-th/scripts/**
