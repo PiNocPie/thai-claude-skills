@@ -135,7 +135,7 @@ def draw_cta(img, t):
     if f0<=t<f1:
         age=t-f0; s=ease_out_back(clamp(age/0.3))
         f=font(46,"bold")
-        label="กดติดตาม"; sub="กดติดตามไว้เลย"
+        label="กดติดตาม"; sub=getattr(T,"FOLLOW_SUB","สอน AI ทำงานแทนทุกคลิป")
         fw,fh,fo=text_wh(f,label)
         sf=font(34,"medium"); sw,sh,so=text_wh(sf,sub)
         bw=max(fw,sw)+ 250
@@ -150,7 +150,7 @@ def draw_cta(img, t):
     c0,c1=T.CTA["comment"]
     if c0<=t<c1:
         f=font(56,"bold")
-        pre="ของฟรีทั้งหมด "; kw="ที่ไบโอ"; post=""
+        pre=getattr(T,"BIO_PRE","โหลดฟรี "); kw=getattr(T,"BIO_KW","ที่ไบโอ"); post=getattr(T,"BIO_POST","")
         parts=[(pre,WHITE),(kw,GREEN),(post,WHITE)]
         widths=[int(f.getlength(p)) for p,_ in parts]
         tot=sum(widths); x=(T.W-tot)//2; y=1625
@@ -169,7 +169,7 @@ def build_frame(t, style_name):
     img = Image.new("RGBA",(T.W,T.H),(0,0,0,0))
     draw_hook(img, t)
     draw_punch(img, t)
-    if t >= 4.6:            # cold-open hook owns the first beat; captions take over after
+    if t >= getattr(T,"HOOK_END",4.6):   # cold-open hook owns the first beat; captions take over after
         draw_caption(img, t, st)
     draw_cta(img, t)
     return img

@@ -258,8 +258,104 @@ def _fade(layer, a):
     al=al.point(lambda v:int(v*a))
     layer.putalpha(al); return layer
 
+# ---------- card: proof strip (row of past-clip thumbnails, top band) ----------
+# reads timeline.PROOF_IMAGES = [path, ...]  (generic; no hardcoded paths)
+def card_proof(base, t, win, dx, a):
+    imgs=getattr(T,"PROOF_IMAGES",[])
+    if not imgs: return
+    n=len(imgs); tw=250; th=int(tw*16/9); gap=40
+    total=n*tw+(n-1)*gap; x0=(base.size[0]-total)//2+dx; y0=112
+    s,e,_=win; local=clamp((t-s)/(e-s-0.4))
+    layer=Image.new("RGBA", base.size,(0,0,0,0)); d=ImageDraw.Draw(layer)
+    # label chip
+    lf=font(40,"bold"); lab="ผลงานล่าสุด"
+    lw=int(lf.getlength(lab)); la,ld=lf.getmetrics()
+    rounded(d,[base.size[0]//2-lw//2-30, 30, base.size[0]//2+lw//2+30, 30+la+ld+14],28,fill=GREEN)
+    d.text((base.size[0]//2-lw//2, 37),lab,font=lf,fill=(14,15,19,255))
+    for i,p in enumerate(imgs):
+        if local < i*0.14: continue
+        try: im=Image.open(p).convert("RGB").resize((tw,th))
+        except Exception: continue
+        bx=x0+i*(tw+gap)
+        _shadow(layer,[bx,y0,bx+tw,y0+th],24)
+        card=Image.new("RGBA",(tw,th),(0,0,0,0)); card.paste(im,(0,0))
+        m=Image.new("L",(tw,th),0); ImageDraw.Draw(m).rounded_rectangle([0,0,tw-1,th-1],24,fill=255)
+        card.putalpha(m); layer.alpha_composite(card,(bx,y0))
+        ImageDraw.Draw(layer).rounded_rectangle([bx,y0,bx+tw-1,y0+th-1],24,outline=GREEN,width=5)
+    if a<1: layer=_fade(layer,a)
+    base.alpha_composite(layer)
+
+# ---------- card: checklist (ticks items progressively, top band) ----------
+# reads timeline.CHECKLIST_ITEMS = ["ตัด/ต่อ", ...]  and optional CHECKLIST_TITLE
+def card_checklist(base, t, win, dx, a):
+    items=getattr(T,"CHECKLIST_ITEMS",[])
+    if not items: return
+    n=len(items); rowh=72
+    x0,y0=90+dx,90; x1=990+dx; y1=y0+84+n*rowh+18
+    box=[x0,y0,x1,y1]
+    _shadow(base, box, 30)
+    layer=Image.new("RGBA", base.size,(0,0,0,0)); d=ImageDraw.Draw(layer)
+    rounded(d, box, 30, fill=PANEL)
+    tf=font(38,"bold"); tt=getattr(T,"CHECKLIST_TITLE","AI ทำให้หมดนี่เลย")
+    d.text((x0+(x1-x0)//2-int(tf.getlength(tt))//2, y0+24), tt, font=tf, fill=GREEN)
+    s,e,_=win; local=clamp((t-s)/(e-s-0.4))
+    nshow=int(clamp(local*1.15)*n+0.001)
+    y=y0+92; cf=font(36,"medium")
+    for i,it in enumerate(items):
+        done=i<nshow; col=GREEN if done else GREY; cx=x0+52
+        d.ellipse([cx,y+6,cx+34,y+40],outline=col,width=3)
+        if done:
+            d.line([cx+9,y+24,cx+16,y+33],fill=GREEN,width=5)
+            d.line([cx+16,y+33,cx+28,y+13],fill=GREEN,width=5)
+        d.text((cx+56,y+2),it,font=cf,fill=WHITE if done else GREY)
+        y+=rowh
+    if a<1: layer=_fade(layer,a)
+    base.alpha_composite(layer)
+
+# ---------- card: orchestration network (1 person -> many AI, top band) ----------
+def _spark(d, cx, cy, r, col):
+    k=0.30
+    d.polygon([(cx,cy-r),(cx+r*k,cy-r*k),(cx+r,cy),(cx+r*k,cy+r*k),
+               (cx,cy+r),(cx-r*k,cy+r*k),(cx-r,cy),(cx-r*k,cy-r*k)],fill=col)
+
+def card_network(base, t, win, dx, a):
+    Wd=base.size[0]
+    layer=Image.new("RGBA", base.size,(0,0,0,0)); d=ImageDraw.Draw(layer)
+    s,e,_=win; local=clamp((t-s)/(e-s-0.4))
+    g=(GREEN[0],GREEN[1],GREEN[2])
+    # title chip
+    lf=font(40,"bold"); lab=getattr(T,"NETWORK_LABEL","1 คน คุม AI ทั้งทีม")
+    lw=int(lf.getlength(lab)); la,ld=lf.getmetrics()
+    rounded(d,[Wd//2-lw//2-30,36,Wd//2+lw//2+30,36+la+ld+14],28,fill=GREEN)
+    d.text((Wd//2-lw//2,43),lab,font=lf,fill=(14,15,19,255))
+    cx=Wd//2+dx; py=210
+    ai_xs=[250+dx,410+dx,670+dx,830+dx]; ai_y=440
+    nshow=int(clamp(local*1.3)*len(ai_xs)+0.001)
+    # connecting lines person -> each AI (reveal progressively)
+    for i,ax in enumerate(ai_xs):
+        if i>=nshow: continue
+        d.line([(cx,py+56),(ax,ai_y-44)],fill=(*g,170),width=4)
+    for i in range(len(ai_xs)-1):
+        if i+1<nshow: d.line([(ai_xs[i],ai_y),(ai_xs[i+1],ai_y)],fill=(120,92,72,130),width=3)
+    # AI nodes
+    for i,ax in enumerate(ai_xs):
+        if i>=nshow: continue
+        r=46; d.ellipse([ax-r,ai_y-r,ax+r,ai_y+r],fill=PANEL2,outline=GREEN,width=4)
+        _spark(d,ax,ai_y,17,GREEN)
+        af=font(24,"bold"); aw=int(af.getlength("AI")); d.text((ax-aw//2,ai_y+18),"AI",font=af,fill=WHITE)
+    # person node (center, on top)
+    r=60; d.ellipse([cx-r,py-r,cx+r,py+r],fill=GREEN)
+    d.ellipse([cx-17,py-28,cx+17,py+6],fill=(14,15,19,255))          # head
+    d.pieslice([cx-32,py+2,cx+32,py+60],180,360,fill=(14,15,19,255)) # shoulders
+    pf=font(32,"bold"); pl="ผม = ผู้กำกับ"; pw=int(pf.getlength(pl))
+    rounded(d,[cx-pw//2-16,py+r+6,cx+pw//2+16,py+r+6+44],20,fill=(0,0,0,185))
+    d.text((cx-pw//2,py+r+12),pl,font=pf,fill=WHITE)
+    if a<1: layer=_fade(layer,a)
+    base.alpha_composite(layer)
+
 CARDS={"skillmd":card_skillmd,"arrow":card_arrow,"claudechat":card_claudechat,
-       "excel":card_excel,"browser":card_browser}
+       "excel":card_excel,"browser":card_browser,"proof":card_proof,
+       "checklist":card_checklist,"network":card_network}
 
 def draw(img, t, style):
     for win in T.INSERTS:
